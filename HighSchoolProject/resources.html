@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - High School Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="resources.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f90">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">High School Portal</div>
+    <ul class="nav-links">
+      <li><a href="welcome.html">HOME</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+    <div class="user-info">
+      <span class="user-name">NOTSI HLOMPHO</span>
+      <div class="user-avatar">NH</div>
+    </div>
+    <div class="menu-btn">☰</div>
+  </nav>
+
+  <main class="resources-container">
+    <!-- Hero Section -->
+    <section class="resources-hero">
+      <div class="hero-content">
+        <h1><i class="fas fa-book-open"></i> Learning Resources</h1>
+        <p>Access study materials, assignments, and educational content to support your learning journey</p>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="resource-search" placeholder="Search resources, subjects, or topics...">
+            <button class="search-btn">Search</button>
+          </div>
+          <div class="search-tags">
+            <span class="tag">Mathematics</span>
+            <span class="tag">Science</span>
+            <span class="tag">Literature</span>
+            <span class="tag">History</span>
+            <span class="tag">Assignments</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="quick-stats">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-book"></i></div>
+          <div class="stat-info">
+            <h3>150+</h3>
+            <p>Study Materials</p>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="stat-info">
+            <h3>85</h3>
+            <p>Assignments</p>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-video"></i></div>
+          <div class="stat-info">
+            <h3>40</h3>
+            <p>Video Lessons</p>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-info">
+            <h3>12</h3>
+            <p>Study Groups</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="resources-content">
+      <!-- Sidebar Filters -->
+      <aside class="filters-sidebar">
+        <div class="filter-section">
+          <h3><i class="fas fa-filter"></i> Filters</h3>
+          
+          <div class="filter-group">
+            <h4>Subject</h4>
+            <div class="filter-options">
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="subject" value="mathematics" checked>
+                <span class="checkmark"></span>
+                <span>Mathematics</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="subject" value="science" checked>
+                <span class="checkmark"></span>
+                <span>Science</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="subject" value="english">
+                <span class="checkmark"></span>
+                <span>English</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="subject" value="history">
+                <span class="checkmark"></span>
+                <span>History</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="subject" value="arts">
+                <span class="checkmark"></span>
+                <span>Arts</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="subject" value="technology">
+                <span class="checkmark"></span>
+                <span>Technology</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h4>Resource Type</h4>
+            <div class="filter-options">
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="type" value="document" checked>
+                <span class="checkmark"></span>
+                <span>Documents</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="type" value="video" checked>
+                <span class="checkmark"></span>
+                <span>Videos</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="type" value="assignment">
+                <span class="checkmark"></span>
+                <span>Assignments</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="type" value="quiz">
+                <span class="checkmark"></span>
+                <span>Quizzes</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" data-filter="type" value="link">
+                <span class="checkmark"></span>
+                <span>External Links</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h4>Grade Level</h4>
+            <div class="grade-buttons">
+              <button class="grade-btn active" data-grade="all">All Grades</button>
+              <button class="grade-btn" data-grade="9">Grade 9</button>
+              <button class="grade-btn" data-grade="10">Grade 10</button>
+              <button class="grade-btn" data-grade="11">Grade 11</button>
+              <button class="grade-btn" data-grade="12">Grade 12</button>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h4>Due Date</h4>
+            <div class="date-filter">
+              <select id="due-date-filter">
+                <option value="all">All Dates</option>
+                <option value="today">Today</option>
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+                <option value="overdue">Overdue</option>
+                <option value="upcoming">Upcoming</option>
+              </select>
+            </div>
+          </div>
+          
+          <button class="clear-filters-btn">
+            <i class="fas fa-redo"></i> Clear All Filters
+          </button>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <h3><i class="fas fa-bolt"></i> Quick Links</h3>
+          <ul>
+            <li><a href="#"><i class="fas fa-calendar-check"></i> Today's Assignments</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Progress Tracker</a></li>
+            <li><a href="#"><i class="fas fa-download"></i> Download Center</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> Help & Tutorials</a></li>
+            <li><a href="#"><i class="fas fa-comments"></i> Ask a Teacher</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Resources Grid -->
+      <section class="resources-main">
+        <div class="resources-header">
+          <h2>Available Resources</h2>
+          <div class="view-options">
+            <span>Sort by:</span>
+            <select id="sort-resources">
+              <option value="recent">Most Recent</option>
+              <option value="popular">Most Popular</option>
+              <option value="name">Name (A-Z)</option>
+              <option value="due-date">Due Date</option>
+              <option value="subject">Subject</option>
+            </select>
+            <div class="view-toggles">
+              <button class="view-toggle active" data-view="grid"><i class="fas fa-th"></i></button>
+              <button class="view-toggle" data-view="list"><i class="fas fa-list"></i></button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Resources Grid/List -->
+        <div class="resources-grid" id="resources-container">
+          <!-- Resources will be dynamically loaded here -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="page-btn prev-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+          <div class="page-numbers">
+            <span class="page-number active">1</span>
+            <span class="page-number">2</span>
+            <span class="page-number">3</span>
+            <span class="page-dots">...</span>
+            <span class="page-number">10</span>
+          </div>
+          <button class="page-btn next-btn">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Featured Resources -->
+    <section class="featured-resources">
+      <div class="section-header">
+        <h2><i class="fas fa-star"></i> Featured Resources</h2>
+        <p>Top recommended materials for this week</p>
+      </div>
+      
+      <div class="featured-grid">
+        <div class="featured-card">
+          <div class="featured-badge">Top Rated</div>
+          <div class="featured-content">
+            <div class="resource-icon featured-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="featured-info">
+              <h3>Algebra Masterclass</h3>
+              <p>Complete guide to quadratic equations and functions with practice problems</p>
+              <div class="featured-meta">
+                <span><i class="fas fa-clock"></i> 45 min</span>
+                <span><i class="fas fa-download"></i> 320 downloads</span>
+              </div>
+            </div>
+          </div>
+          <button class="featured-btn">Access Now</button>
+        </div>
+        
+        <div class="featured-card">
+          <div class="featured-badge">New</div>
+          <div class="featured-content">
+            <div class="resource-icon featured-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="featured-info">
+              <h3>Chemistry Lab Simulations</h3>
+              <p>Interactive virtual labs for chemical reactions and experiments</p>
+              <div class="featured-meta">
+                <span><i class="fas fa-clock"></i> 1.5 hours</span>
+                <span><i class="fas fa-users"></i> 5 activities</span>
+              </div>
+            </div>
+          </div>
+          <button class="featured-btn">Try Simulation</button>
+        </div>
+        
+        <div class="featured-card">
+          <div class="featured-badge">Popular</div>
+          <div class="featured-content">
+            <div class="resource-icon featured-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="featured-info">
+              <h3>Shakespeare Study Guide</h3>
+              <p>Analysis of Macbeth with character breakdowns and theme exploration</p>
+              <div class="featured-meta">
+                <span><i class="fas fa-file-alt"></i> 85 pages</span>
+                <span><i class="fas fa-star"></i> 4.8/5 rating</span>
+              </div>
+            </div>
+          </div>
+          <button class="featured-btn">Read Guide</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Assignments -->
+    <section class="upcoming-assignments">
+      <div class="section-header">
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Assignments</h2>
+        <button class="view-all-btn">View All <i class="fas fa-arrow-right"></i></button>
+      </div>
+      
+      <div class="assignments-table">
+        <div class="table-header">
+          <div class="table-cell">Assignment</div>
+          <div class="table-cell">Subject</div>
+          <div class="table-cell">Due Date</div>
+          <div class="table-cell">Status</div>
+          <div class="table-cell">Action</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell">
+            <div class="assignment-title">
+              <i class="fas fa-file-alt"></i>
+              <div>
+                <strong>Essay: The Industrial Revolution</strong>
+                <p>History - 1500 words minimum</p>
+              </div>
+            </div>
+          </div>
+          <div class="table-cell">History</div>
+          <div class="table-cell">
+            <span class="due-date due-soon">Tomorrow</span>
+          </div>
+          <div class="table-cell">
+            <span class="status in-progress">In Progress</span>
+          </div>
+          <div class="table-cell">
+            <button class="action-btn">Continue</button>
+          </div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell">
+            <div class="assignment-title">
+              <i class="fas fa-calculator"></i>
+              <div>
+                <strong>Calculus Problems Set</strong>
+                <p>Mathematics - 20 problems</p>
+              </div>
+            </div>
+          </div>
+          <div class="table-cell">Mathematics</div>
+          <div class="table-cell">
+            <span class="due-date due-week">Nov 15</span>
+          </div>
+          <div class="table-cell">
+            <span class="status not-started">Not Started</span>
+          </div>
+          <div class="table-cell">
+            <button class="action-btn">Start</button>
+          </div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell">
+            <div class="assignment-title">
+              <i class="fas fa-flask"></i>
+              <div>
+                <strong>Chemistry Lab Report</strong>
+                <p>Science - Experiment #5</p>
+              </div>
+            </div>
+          </div>
+          <div class="table-cell">Science</div>
+          <div class="table-cell">
+            <span class="due-date due-today">Today</span>
+          </div>
+          <div class="table-cell">
+            <span class="status submitted">Submitted</span>
+          </div>
+          <div class="table-cell">
+            <button class="action-btn disabled" disabled>View</button>
+          </div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell">
+            <div class="assignment-title">
+              <i class="fas fa-book"></i>
+              <div>
+                <strong>Reading Response</strong>
+                <p>English - Chapter 5-7</p>
+              </div>
+            </div>
+          </div>
+          <div class="table-cell">English</div>
+          <div class="table-cell">
+            <span class="due-date">Nov 20</span>
+          </div>
+          <div class="table-cell">
+            <span class="status in-progress">In Progress</span>
+          </div>
+          <div class="table-cell">
+            <button class="action-btn">Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Study Groups -->
+    <section class="study-groups">
+      <div class="section-header">
+        <h2><i class="fas fa-users"></i> Active Study Groups</h2>
+        <p>Join collaborative study sessions with classmates</p>
+      </div>
+      
+      <div class="groups-grid">
+        <div class="group-card">
+          <div class="group-header">
+            <div class="group-icon"><i class="fas fa-calculator"></i></div>
+            <div class="group-info">
+              <h3>Math Club</h3>
+              <p>Advanced Mathematics</p>
+            </div>
+            <span class="group-members">12 members</span>
+          </div>
+          <div class="group-details">
+            <p><i class="fas fa-calendar"></i> Meets every Tuesday & Thursday</p>
+            <p><i class="fas fa-clock"></i> 3:30 PM - 5:00 PM</p>
+            <p><i class="fas fa-map-marker-alt"></i> Room 205</p>
+          </div>
+          <div class="group-actions">
+            <button class="group-btn join-btn">Join Group</button>
+            <button class="group-btn view-btn">View Schedule</button>
+          </div>
+        </div>
+        
+        <div class="group-card">
+          <div class="group-header">
+            <div class="group-icon"><i class="fas fa-flask"></i></div>
+            <div class="group-info">
+              <h3>Science Society</h3>
+              <p>Physics & Chemistry</p>
+            </div>
+            <span class="group-members">8 members</span>
+          </div>
+          <div class="group-details">
+            <p><i class="fas fa-calendar"></i> Meets every Wednesday</p>
+            <p><i class="fas fa-clock"></i> 4:00 PM - 5:30 PM</p>
+            <p><i class="fas fa-map-marker-alt"></i> Science Lab 3</p>
+          </div>
+          <div class="group-actions">
+            <button class="group-btn join-btn">Join Group</button>
+            <button class="group-btn view-btn">View Schedule</button>
+          </div>
+        </div>
+        
+        <div class="group-card">
+          <div class="group-header">
+            <div class="group-icon"><i class="fas fa-book"></i></div>
+            <div class="group-info">
+              <h3>Literary Circle</h3>
+              <p>Book Discussions & Analysis</p>
+            </div>
+            <span class="group-members">15 members</span>
+          </div>
+          <div class="group-details">
+            <p><i class="fas fa-calendar"></i> Meets every Friday</p>
+            <p><i class="fas fa-clock"></i> 3:00 PM - 4:30 PM</p>
+            <p><i class="fas fa-map-marker-alt"></i> Library Conference Room</p>
+          </div>
+          <div class="group-actions">
+            <button class="group-btn join-btn">Join Group</button>
+            <button class="group-btn view-btn">View Schedule</button>
+          </div>
+        </div>
+        
+        <div class="group-card create-group">
+          <div class="create-group-content">
+            <i class="fas fa-plus-circle"></i>
+            <h3>Create Your Own Group</h3>
+            <p>Start a study group for any subject</p>
+            <button class="create-btn">Create Group</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="resources-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-graduation-cap"></i> High School Portal</h3>
+        <p>Empowering students with resources for academic success</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Library Access</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Tutoring Services</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Academic Calendar</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Need Help?</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Teachers</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Technical Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 High School Portal. All educational resources are property of their respective owners.</p>
+    </div>
+  </footer>
+
+  <!-- Resource Modal -->
+  <div class="modal" id="resource-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Resource Title</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Content will be loaded dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="modal-close">Close</button>
+        <button class="btn-primary" id="modal-download">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="resources.js"></script>
+</body>
+</html>
